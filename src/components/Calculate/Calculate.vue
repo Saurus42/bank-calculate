@@ -9,7 +9,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, PropType } from 'vue';
+import { Rate } from '../../class/NBP/result';
 export default defineComponent({
   setup() {
     const count = ref(0);
@@ -17,11 +18,11 @@ export default defineComponent({
   },
   props: {
     items: {
-      type: Array,
+      type: Object as PropType<Rate[]>,
       required: true
     },
     output: {
-      type: Array,
+      type: Object as PropType<Rate[]>,
       required: true
     }
   }
